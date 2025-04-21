@@ -17,6 +17,8 @@ Hardware – PCs, Cyclone II , USB flasher
 **Theory**
 
 **Logic Diagram**
+![image](https://github.com/user-attachments/assets/ed8d3497-c670-47e0-9f8c-8c2e4ef2b073)
+
 
 **Procedure**
 
@@ -35,26 +37,36 @@ Hardware – PCs, Cyclone II , USB flasher
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 ~~~~
-module ha_dataflow(a, b, s, ca); 
-    input a; 
-    input b; 
-    output s; 
-    output ca; 
-  assign#2 s=a^b; 
-  assign#2 ca=a&b;
-  endmodule
+module ex2a(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1=((~a&b&d)|(~b&~d)|(a&b&~c));
+endmodule
+
+module ex2b(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=((~y&z)|(x&y)|(w&y));
+endmodule
 ~~~~
 ~~~
 Developed by: Madhumitha R
-RegisterNumber: 2122242400873
+RegisterNumber: 212224240082
 */
 
 ~~~~
 **RTL realization**
-![WhatsApp Image 2025-04-09 at 09 14 23_cd85ab0c](https://github.com/user-attachments/assets/be1331f9-df50-40bd-9761-98818d525abe)
+
+![exp2ares](https://github.com/user-attachments/assets/83a77764-4c05-4099-94e1-ef10499bd97d)
+
+![Screenshot 2025-04-16 113654](https://github.com/user-attachments/assets/41d932da-6d0b-4491-92ed-0586511e9ae3)
+
 
 **Timing Diagram**
-![WhatsApp Image 2025-04-09 at 09 14 34_631ec5ce](https://github.com/user-attachments/assets/bab44268-730d-4c9b-bff3-118ad5f4bbb8)
+![Screenshot 2025-03-17 142521](https://github.com/user-attachments/assets/9740b3e5-110c-4c5a-80d3-7742e3c17850)
+
+![Screenshot 2025-04-16 114245](https://github.com/user-attachments/assets/72cf370b-f087-4e7a-8bb9-f1e07887a3ac)
+
 
 **Output:**
 
